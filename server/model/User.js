@@ -1,0 +1,19 @@
+/* eslint-env es6 */
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+let user = new Schema({
+    name: {
+        type: String
+    },
+    email: {
+        type: String
+    },
+    username: {
+        type: String
+    }
+}, {
+    collection: 'users'
+})
+
+module.exports = mongoose.model('User', user)
